@@ -23,13 +23,42 @@ public class NewMain {
         System.out.println("Suma1: " + suma1);
         System.out.println("Suma2: " + suma2);
 
+        //UneCadenas
+        //EL lambda es el mismo pero el tipo de datos se define a partir del metodo base
+        UneCadenas u1 = (s1, s2) -> s1 + s2;
+        String rpta = u1.join("Hola", "Mundo Java");
+        System.out.println("La cadena: " + rpta);
+
+        //CalculadoraDos
+        CalculadoraDos c3 = (n1, n2, n3) -> {
+            double suma = 0;
+            if (n3 < 5) {
+                suma = n1 + n2;
+            } else {
+                suma = n1 - n2;
+            }
+            return suma;
+        };
+
+        double suma3= c3.suma(1,2,3);
+        double suma4= c3.suma(10.5,20.5,31);
+        System.out.println("Suma3: " + suma3);
+        System.out.println("Suma4: " + suma4);
 
     }
 
 
     //Una interfaz Random
     public interface Calculadora {
-
         double suma(double n1, double n2);
+    }
+
+    @FunctionalInterface
+    public interface UneCadenas {
+        String join(String s1, String s2);
+    }
+
+    public interface CalculadoraDos {
+        double suma(double n1, double n2, int n3);
     }
 }
