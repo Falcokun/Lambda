@@ -18,7 +18,6 @@ public class Test3 {
 
         c = getOperacion(4);
         System.out.println("Division " + c.operacion(1, 2));
-
     }
 
     @FunctionalInterface
