@@ -1,7 +1,7 @@
 # Lambda
 ##Programacion Java 2015-I
 ###Programacion Funcional
-Sirven para instanciar clases anonimas
+Sirven para instanciar clases anonimas, es la generalizacion de las clases inner anonimas con interfazes funcionales.
 <br>
 (param) -> expresion;
 <br>
